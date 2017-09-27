@@ -17,3 +17,7 @@ C:\Users\Windows7V\Documents\Repostor\FileGlobalVoices\trunk\IntitutoGobalVoices
 C:\Users\Windows7V\Documents\Repostor\FileGlobalVoices\trunk\IntitutoGobalVoices\Entidades\obj\Debug\Entidades.csprojResolveAssemblyReference.cache
 C:\Users\Windows7V\Documents\Repostor\FileGlobalVoices\trunk\IntitutoGobalVoices\Entidades\obj\Debug\Entidades.dll
 C:\Users\Windows7V\Documents\Repostor\FileGlobalVoices\trunk\IntitutoGobalVoices\Entidades\obj\Debug\Entidades.pdb
+C:\Users\Windows7V\Documents\Repostor\arhivoGlobalVoices\trunk\IntitutoGobalVoices\Entidades\bin\Debug\Entidades.dll
+C:\Users\Windows7V\Documents\Repostor\arhivoGlobalVoices\trunk\IntitutoGobalVoices\Entidades\bin\Debug\Entidades.pdb
+C:\Users\Windows7V\Documents\Repostor\arhivoGlobalVoices\trunk\IntitutoGobalVoices\Entidades\obj\Debug\Entidades.dll
+C:\Users\Windows7V\Documents\Repostor\arhivoGlobalVoices\trunk\IntitutoGobalVoices\Entidades\obj\Debug\Entidades.pdb
