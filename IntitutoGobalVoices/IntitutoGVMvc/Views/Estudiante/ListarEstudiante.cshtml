@@ -1,0 +1,155 @@
+﻿<body class="container">
+    <div class="panel panel-primary">
+        <div class="panel-heading">
+            <h4 align="center">Lista de Estudiantes</h4>
+        </div>
+        <div class="panel-body">
+            
+        @if (TempData["msjeGuardoConExito"] != null)
+        {
+            <script>
+                $(document).ready(function() {
+                    alert("Se guardó con éxito");
+                })
+            </script>
+        }
+         @if (TempData["msjeELEstudiateYaHaSidoRegistradoAnteriormente"] != null)
+        {
+            <script>
+                $(document).ready(function () {
+                    alert(" Error!! El Estudiante ya ha sido registrado anteriormente");
+                })
+            </script>
+        }           
+            
+            @if (TempData["msjEstudianteEstaMatriculado"] != null)
+        {
+            <script>
+                $(document).ready(function () {
+                    alert(" Error!! El Estudiante está matriculado, no se puede eliminar ");
+                })
+            </script>
+        }
+            
+        @if (TempData["msjEstudianteHaSidoEliminado"] != null)
+        {
+            <script>
+                $(document).ready(function () {
+                    alert("Estudiante eliminado con éxito");
+                })
+            </script>
+        }          
+
+            <form class=" form-horizontal " action="/estudiante/listar"  >
+                <div class="form-group form-horizontal" >
+                    <label class="col-sm-3 col-md-offset-1 control-label ">Apellidos o Nro. Documento</label>
+                    <div class="col-sm-4">
+                        <input class="form-control"  type="text" name="criterioBusqueda"    />
+                    </div>
+                   
+                    <button class=" btn btn-default" id="btnGuardar">Buscar</button>
+                  
+                      
+                </div>    
+                <div class="form-group col-md-12" >
+                    <table class="table table-hover">
+                        <a class="btn btn-primary" href="~/estudiante/crear" role="button">Registrar</a>
+                      
+                        <thead>
+                            <tr>
+                                @*<th>Id</th>*@
+                                <th>Nro Documento</th>
+                                <th>Apellidos y Nombres</th>
+                                
+                                <th>Dirección</th>
+                                <th>Celular</th>
+                                <th>Teléfono</th>
+                                <th>Email</th>
+                                <th>Acciones</th>
+
+
+                            </tr>
+                        </thead>
+                        <tbody>
+
+                            @foreach (var item in Model)
+                            {
+
+                                <tr>
+                                    @*<td>@item.Id</td>       *@
+                                    <td>@item.NroDocumento</td>
+                                    <td>@item.ApellidoPaterno @item.ApellidoMaterno @item.Nombres</td>
+                                   
+                                    <td>@item.Direccion</td>
+                                    <td>@item.Celular</td>
+                                    <td>@item.Telefono</td>
+                                    <td>@item.Email</td>
+                                    <td>
+                                        <a href="/estudiante/detalle?id=@item.Id">Detalle</a>
+                                        <a href="/estudiante/editar?id=@item.Id">Editar</a>
+                                     
+                                        @Html.ActionLink("Eliminar", "Eliminar", 
+                                        new { id=item.Id },
+			                            new { onClick="return confirm('Desea Eliminar al Estudiante " + @item.Nombres + " "+@item.ApellidoPaterno  + " "+ @item.ApellidoMaterno  + "?');" })
+
+                                    </td>
+   
+                                </tr>
+                            }
+    
+                        </tbody>
+                    </table>
+                </div>
+                <nav>
+                    <ul class="pager">
+                        @{
+                            double veinte = double.Parse(20.ToString());
+                            double nroRegistros = double.Parse((ViewBag.NroRegistros).ToString());
+                            double numeroPaginas = nroRegistros / veinte;
+                            double numeroPaginasRedondeado = Math.Ceiling(numeroPaginas);
+                        } 
+                        <li>
+                            <a href="?page=1" >Inicio</a>
+                        </li>
+                        <li>
+                            @if (ViewBag.page != 1)
+                            {
+                                <a href="?page=@(ViewBag.page - 1)">Anterior</a>                              
+                            }
+                            else
+                            {
+                                <a href="?page=@(ViewBag.page - 1)" class="disabled">Anterior</a>
+                            }
+
+                           
+                        </li>
+                        <li>
+                            @if (ViewBag.page != numeroPaginasRedondeado)
+                            {
+                                <a href="?page=@(ViewBag.page + 1)" >Siguiente</a>
+                            }
+                            else
+                            {
+                                <a href="?page=@(ViewBag.page + 1)"  class="disabled" >Siguiente</a>
+                            }
+                           
+                        </li>
+                        <li>
+                            <a href="?page=@numeroPaginasRedondeado">Final</a>
+                        </li>                                                            
+                    </ul>
+                </nav>
+
+                <p align="right" >Pg @ViewBag.page</p>
+            </form>
+        </div>
+    </div>
+   
+    <style>
+          .disabled {
+           pointer-events: none;
+           cursor: default;
+        }      
+    </style>
+
+</body>

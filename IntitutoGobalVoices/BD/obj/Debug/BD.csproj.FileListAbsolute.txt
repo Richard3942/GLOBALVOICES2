@@ -1,0 +1,42 @@
+C:\Users\Richard\Documents\Visual Studio 2012\Projects\IntitutoGobalVoices\BD\bin\Debug\BD.dll.config
+C:\Users\Richard\Documents\Visual Studio 2012\Projects\IntitutoGobalVoices\BD\bin\Debug\BD.dll
+C:\Users\Richard\Documents\Visual Studio 2012\Projects\IntitutoGobalVoices\BD\bin\Debug\BD.pdb
+C:\Users\Richard\Documents\Visual Studio 2012\Projects\IntitutoGobalVoices\BD\bin\Debug\Entidades.dll
+C:\Users\Richard\Documents\Visual Studio 2012\Projects\IntitutoGobalVoices\BD\bin\Debug\EntityFramework.dll
+C:\Users\Richard\Documents\Visual Studio 2012\Projects\IntitutoGobalVoices\BD\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\Richard\Documents\Visual Studio 2012\Projects\IntitutoGobalVoices\BD\bin\Debug\Entidades.pdb
+C:\Users\Richard\Documents\Visual Studio 2012\Projects\IntitutoGobalVoices\BD\bin\Debug\EntityFramework.xml
+C:\Users\Richard\Documents\Visual Studio 2012\Projects\IntitutoGobalVoices\BD\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\Richard\Documents\Visual Studio 2012\Projects\IntitutoGobalVoices\BD\bin\Debug\es\EntityFramework.resources.dll
+C:\Users\Richard\Documents\Visual Studio 2012\Projects\IntitutoGobalVoices\BD\bin\Debug\es\EntityFramework.SqlServer.resources.dll
+C:\Users\Richard\Documents\Visual Studio 2012\Projects\IntitutoGobalVoices\BD\obj\Debug\BD.csprojResolveAssemblyReference.cache
+C:\Users\Richard\Documents\Visual Studio 2012\Projects\IntitutoGobalVoices\BD\obj\Debug\BD.dll
+C:\Users\Richard\Documents\Visual Studio 2012\Projects\IntitutoGobalVoices\BD\obj\Debug\BD.pdb
+C:\Users\Richard\Documents\Visual Studio 2012\Projects\arrancao2\arranco desde aca\IntitutoGobalVoices\BD\bin\Debug\BD.dll.config
+C:\Users\Richard\Documents\Visual Studio 2012\Projects\arrancao2\arranco desde aca\IntitutoGobalVoices\BD\bin\Debug\BD.dll
+C:\Users\Richard\Documents\Visual Studio 2012\Projects\arrancao2\arranco desde aca\IntitutoGobalVoices\BD\bin\Debug\BD.pdb
+C:\Users\Richard\Documents\Visual Studio 2012\Projects\arrancao2\arranco desde aca\IntitutoGobalVoices\BD\bin\Debug\Entidades.dll
+C:\Users\Richard\Documents\Visual Studio 2012\Projects\arrancao2\arranco desde aca\IntitutoGobalVoices\BD\bin\Debug\EntityFramework.dll
+C:\Users\Richard\Documents\Visual Studio 2012\Projects\arrancao2\arranco desde aca\IntitutoGobalVoices\BD\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\Richard\Documents\Visual Studio 2012\Projects\arrancao2\arranco desde aca\IntitutoGobalVoices\BD\bin\Debug\Entidades.pdb
+C:\Users\Richard\Documents\Visual Studio 2012\Projects\arrancao2\arranco desde aca\IntitutoGobalVoices\BD\bin\Debug\EntityFramework.xml
+C:\Users\Richard\Documents\Visual Studio 2012\Projects\arrancao2\arranco desde aca\IntitutoGobalVoices\BD\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\Richard\Documents\Visual Studio 2012\Projects\arrancao2\arranco desde aca\IntitutoGobalVoices\BD\bin\Debug\es\EntityFramework.resources.dll
+C:\Users\Richard\Documents\Visual Studio 2012\Projects\arrancao2\arranco desde aca\IntitutoGobalVoices\BD\bin\Debug\es\EntityFramework.SqlServer.resources.dll
+C:\Users\Richard\Documents\Visual Studio 2012\Projects\arrancao2\arranco desde aca\IntitutoGobalVoices\BD\obj\Debug\BD.csprojResolveAssemblyReference.cache
+C:\Users\Richard\Documents\Visual Studio 2012\Projects\arrancao2\arranco desde aca\IntitutoGobalVoices\BD\obj\Debug\BD.dll
+C:\Users\Richard\Documents\Visual Studio 2012\Projects\arrancao2\arranco desde aca\IntitutoGobalVoices\BD\obj\Debug\BD.pdb
+C:\Users\Windows7V\Documents\NUEVO GLOBAL VOICES\IntitutoGobalVoices\BD\bin\Debug\BD.dll.config
+C:\Users\Windows7V\Documents\NUEVO GLOBAL VOICES\IntitutoGobalVoices\BD\bin\Debug\BD.dll
+C:\Users\Windows7V\Documents\NUEVO GLOBAL VOICES\IntitutoGobalVoices\BD\bin\Debug\BD.pdb
+C:\Users\Windows7V\Documents\NUEVO GLOBAL VOICES\IntitutoGobalVoices\BD\bin\Debug\Entidades.dll
+C:\Users\Windows7V\Documents\NUEVO GLOBAL VOICES\IntitutoGobalVoices\BD\bin\Debug\EntityFramework.dll
+C:\Users\Windows7V\Documents\NUEVO GLOBAL VOICES\IntitutoGobalVoices\BD\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\Windows7V\Documents\NUEVO GLOBAL VOICES\IntitutoGobalVoices\BD\bin\Debug\Entidades.pdb
+C:\Users\Windows7V\Documents\NUEVO GLOBAL VOICES\IntitutoGobalVoices\BD\bin\Debug\EntityFramework.xml
+C:\Users\Windows7V\Documents\NUEVO GLOBAL VOICES\IntitutoGobalVoices\BD\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\Windows7V\Documents\NUEVO GLOBAL VOICES\IntitutoGobalVoices\BD\bin\Debug\es\EntityFramework.resources.dll
+C:\Users\Windows7V\Documents\NUEVO GLOBAL VOICES\IntitutoGobalVoices\BD\bin\Debug\es\EntityFramework.SqlServer.resources.dll
+C:\Users\Windows7V\Documents\NUEVO GLOBAL VOICES\IntitutoGobalVoices\BD\obj\Debug\BD.csprojResolveAssemblyReference.cache
+C:\Users\Windows7V\Documents\NUEVO GLOBAL VOICES\IntitutoGobalVoices\BD\obj\Debug\BD.dll
+C:\Users\Windows7V\Documents\NUEVO GLOBAL VOICES\IntitutoGobalVoices\BD\obj\Debug\BD.pdb

@@ -1,0 +1,21 @@
+C:\Users\Richard\Documents\Visual Studio 2012\Projects\IntitutoGobalVoices\Interfaces\bin\Debug\Interfaces.dll
+C:\Users\Richard\Documents\Visual Studio 2012\Projects\IntitutoGobalVoices\Interfaces\bin\Debug\Interfaces.pdb
+C:\Users\Richard\Documents\Visual Studio 2012\Projects\IntitutoGobalVoices\Interfaces\bin\Debug\Entidades.dll
+C:\Users\Richard\Documents\Visual Studio 2012\Projects\IntitutoGobalVoices\Interfaces\bin\Debug\Entidades.pdb
+C:\Users\Richard\Documents\Visual Studio 2012\Projects\IntitutoGobalVoices\Interfaces\obj\Debug\Interfaces.csprojResolveAssemblyReference.cache
+C:\Users\Richard\Documents\Visual Studio 2012\Projects\IntitutoGobalVoices\Interfaces\obj\Debug\Interfaces.dll
+C:\Users\Richard\Documents\Visual Studio 2012\Projects\IntitutoGobalVoices\Interfaces\obj\Debug\Interfaces.pdb
+C:\Users\Richard\Documents\Visual Studio 2012\Projects\arrancao2\arranco desde aca\IntitutoGobalVoices\Interfaces\bin\Debug\Interfaces.dll
+C:\Users\Richard\Documents\Visual Studio 2012\Projects\arrancao2\arranco desde aca\IntitutoGobalVoices\Interfaces\bin\Debug\Interfaces.pdb
+C:\Users\Richard\Documents\Visual Studio 2012\Projects\arrancao2\arranco desde aca\IntitutoGobalVoices\Interfaces\bin\Debug\Entidades.dll
+C:\Users\Richard\Documents\Visual Studio 2012\Projects\arrancao2\arranco desde aca\IntitutoGobalVoices\Interfaces\bin\Debug\Entidades.pdb
+C:\Users\Richard\Documents\Visual Studio 2012\Projects\arrancao2\arranco desde aca\IntitutoGobalVoices\Interfaces\obj\Debug\Interfaces.csprojResolveAssemblyReference.cache
+C:\Users\Richard\Documents\Visual Studio 2012\Projects\arrancao2\arranco desde aca\IntitutoGobalVoices\Interfaces\obj\Debug\Interfaces.dll
+C:\Users\Richard\Documents\Visual Studio 2012\Projects\arrancao2\arranco desde aca\IntitutoGobalVoices\Interfaces\obj\Debug\Interfaces.pdb
+C:\Users\Windows7V\Documents\NUEVO GLOBAL VOICES\IntitutoGobalVoices\Interfaces\bin\Debug\Interfaces.dll
+C:\Users\Windows7V\Documents\NUEVO GLOBAL VOICES\IntitutoGobalVoices\Interfaces\bin\Debug\Interfaces.pdb
+C:\Users\Windows7V\Documents\NUEVO GLOBAL VOICES\IntitutoGobalVoices\Interfaces\bin\Debug\Entidades.dll
+C:\Users\Windows7V\Documents\NUEVO GLOBAL VOICES\IntitutoGobalVoices\Interfaces\bin\Debug\Entidades.pdb
+C:\Users\Windows7V\Documents\NUEVO GLOBAL VOICES\IntitutoGobalVoices\Interfaces\obj\Debug\Interfaces.csprojResolveAssemblyReference.cache
+C:\Users\Windows7V\Documents\NUEVO GLOBAL VOICES\IntitutoGobalVoices\Interfaces\obj\Debug\Interfaces.dll
+C:\Users\Windows7V\Documents\NUEVO GLOBAL VOICES\IntitutoGobalVoices\Interfaces\obj\Debug\Interfaces.pdb

@@ -1,0 +1,14 @@
+C:\Users\Richard\Documents\Visual Studio 2012\Projects\IntitutoGobalVoices\Entidades\bin\Debug\Entidades.dll
+C:\Users\Richard\Documents\Visual Studio 2012\Projects\IntitutoGobalVoices\Entidades\bin\Debug\Entidades.pdb
+C:\Users\Richard\Documents\Visual Studio 2012\Projects\IntitutoGobalVoices\Entidades\obj\Debug\Entidades.csprojResolveAssemblyReference.cache
+C:\Users\Richard\Documents\Visual Studio 2012\Projects\IntitutoGobalVoices\Entidades\obj\Debug\Entidades.dll
+C:\Users\Richard\Documents\Visual Studio 2012\Projects\IntitutoGobalVoices\Entidades\obj\Debug\Entidades.pdb
+C:\Users\Richard\Documents\Visual Studio 2012\Projects\arrancao2\arranco desde aca\IntitutoGobalVoices\Entidades\bin\Debug\Entidades.dll
+C:\Users\Richard\Documents\Visual Studio 2012\Projects\arrancao2\arranco desde aca\IntitutoGobalVoices\Entidades\bin\Debug\Entidades.pdb
+C:\Users\Richard\Documents\Visual Studio 2012\Projects\arrancao2\arranco desde aca\IntitutoGobalVoices\Entidades\obj\Debug\Entidades.dll
+C:\Users\Richard\Documents\Visual Studio 2012\Projects\arrancao2\arranco desde aca\IntitutoGobalVoices\Entidades\obj\Debug\Entidades.pdb
+C:\Users\Windows7V\Documents\NUEVO GLOBAL VOICES\IntitutoGobalVoices\Entidades\bin\Debug\Entidades.dll
+C:\Users\Windows7V\Documents\NUEVO GLOBAL VOICES\IntitutoGobalVoices\Entidades\bin\Debug\Entidades.pdb
+C:\Users\Windows7V\Documents\NUEVO GLOBAL VOICES\IntitutoGobalVoices\Entidades\obj\Debug\Entidades.csprojResolveAssemblyReference.cache
+C:\Users\Windows7V\Documents\NUEVO GLOBAL VOICES\IntitutoGobalVoices\Entidades\obj\Debug\Entidades.dll
+C:\Users\Windows7V\Documents\NUEVO GLOBAL VOICES\IntitutoGobalVoices\Entidades\obj\Debug\Entidades.pdb

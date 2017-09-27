@@ -1,0 +1,666 @@
+﻿@*<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+
+</head>*@
+
+
+<body class="container">
+
+    <div class="panel panel-primary">
+        <div class="panel-heading">
+            <h4 align="center">Matricular Estudiante</h4>
+        </div>
+
+        <div class="panel-body">
+            <form id="registration-form" class="col-md-10 col-md-offset-1 form-horizontal " action="/matricula/guardar" method="post">
+                <legend>
+                    <h5>Matrícula</h5>
+                </legend>
+
+                <div class="form-group">
+                    <label class="col-sm-3 control-label">NroVoucher    </label>
+                    <div class="col-sm-5">
+                        <input class="form-control"  type="text" name="NroVoucher"   value="@Model.NroVoucher" />
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="col-sm-3 control-label ">Tipo Matrícula</label>
+                    <div class="col-sm-10 col-md-offset-3">
+                        @if (@Model.TipoMatricula == "Estudiante Nuevo")
+                        {
+                            <div class="radio">
+                                <label>
+                                    <input id="1" type="radio" name="TipoMatricula" value="Estudiante Nuevo" checked="checked" />
+                                    Estudiante Nuevo
+                                </label>
+                                <label>
+                                    <input id="2" type="radio" name="TipoMatricula" value="Por Examen de Ubicacion" />
+                                    Por Examen de Ubicación
+                                </label>
+                                <label>
+                                    <input id="3" type="radio" name="TipoMatricula" value="Renovacion de Matricula" />
+                                    Renovación de Matrícula
+                                </label>
+                            </div>
+
+                        }
+                        else if (@Model.TipoMatricula == "Por Examen de Ubicacion")
+                        {
+                            <div class="radio">
+                                <label>
+                                    <input id="1" type="radio" name="TipoMatricula" value="Estudiante Nuevo" />
+                                    Estudiante Nuevo
+                                </label>
+                                <label>
+                                    <input id="2" type="radio" name="TipoMatricula" value="Por Examen de Ubicacion" checked="checked" />
+                                    Por Examen de Ubicación
+                                </label>
+                                <label>
+                                    <input id="3" type="radio" name="TipoMatricula" value="Renovacion de Matricula" />
+                                    Renovación de Matrícula
+                                </label>
+                            </div>
+                        }
+                        else if (@Model.TipoMatricula == "Renovacion de Matricula")
+                        {
+                            <div class="radio">
+                                <label>
+                                    <input id="1" type="radio" name="TipoMatricula" value="Estudiante Nuevo" />
+                                    Estudiante Nuevo
+                                </label>
+                                <label>
+                                    <input id="2" type="radio" name="TipoMatricula" value="Por Examen de Ubicacion" />
+                                    Por Examen de Ubicación
+                                </label>
+                                <label>
+                                    <input id="3" type="radio" name="TipoMatricula" value="Renovacion de Matricula" checked="checked" />
+                                    Renovación de Matrícula
+                                </label>
+                            </div>
+                        }
+                        else
+                        {
+                            <div class="radio">
+                                <label>
+                                    <input id="1" type="radio" name="TipoMatricula" value="Estudiante Nuevo" />
+                                    Estudiante Nuevo   
+                                </label>
+                                <label>
+                                    <input id="2" type="radio" name="TipoMatricula" value="Por Examen de Ubicacion" />
+                                    Por Examen de Ubicación   
+                                </label>
+                                <label>
+                                    <input id="3" type="radio" name="TipoMatricula" value="Renovacion de Matricula" />
+                                    Renovación de Matrícula   
+                                </label>
+                            </div>
+
+                
+                        }
+                    </div>
+                </div>
+
+                <legend>
+                    <h5>Estudiante</h5>
+                </legend>
+
+                <div class="form-group">
+                    <label class="col-sm-3 control-label">Nro Documento</label>
+                    <div class="col-sm-5">
+                        <input class="form-control" type="text" name="NroDocumento" value="@Model.NroDocumento" />
+                          @Html.ValidationMessage("NroDocumento")
+                    </div>
+                    <div class="col-sm-3">
+                        <button class="btn btn-default btn btn-info" name="Action" type="submit"value="BuscarEstudiantePorNroDoc">...</button>
+                        <!-- Button trigger modal -->
+                        <button type="button" class="btn btn-default btn btn-info" id="btnCrearEstudiante" data-toggle="modal" data-target="#myModal" onclick="ClickButtonAgregar()">+</button>
+
+                    </div>
+
+                </div>
+
+
+                <div class="form-group">
+                    <label class="col-sm-3 control-label">Nombres Completo</label>
+                    <div class="col-sm-6">
+                        <input class="form-control" type="hidden" name="PersonaSeleccionadaId" value="@Model.PersonaSeleccionadaId" />
+                        <input class="form-control"  type="text" id="NombresCompletos" name="NombresCompletos" value="@Model.NombresCompletos" readonly="true"/>
+
+                    </div>
+                </div>
+
+
+                <legend>
+                    <h5>Horario</h5>
+                </legend>
+
+                <div class="container-fluid">
+
+                    @* <div class="row">*@
+
+                    <div class="form-group">
+                        <div class="col-md-3">
+                            <label class="col-md-3  control-label "><b>Nivel</b></label>
+                        </div>
+                        <div class="col-md-3">
+                            <label class="col-sm-2  control-label "><b>Ciclo</b></label>
+                        </div>
+                        <div class="col-md-3">
+                            <label class="col-sm-2  control-label "><b>Turno</b></label>
+                        </div>
+                        <div class="col-md-3">
+                            <label class="col-sm-2  control-label "><b>Horario</b></label>
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <div class="row">
+
+                    <div class="col-md-3">
+
+                        <div class="form-group">
+
+
+                            <button id="btnNivelChangeId" name="Action" value="ParamBtnNivelChange" hidden="True" type="submit"></button>
+                            <select class="form-control" name="NivelSeleccionadoId" onchange="NivelChange()" style="width: 160px" >
+                                <option value="0">Seleccionar</option>
+                                @foreach (var item in ViewBag.Niveless)
+                                {
+                                    if (item.Id == @Model.NivelSeleccionadoId)
+                                    {         
+                                        <option value="@item.Id"   selected="selected" >@item.Nombre</option>                           
+                                    }
+                                    else
+                                    {
+                                        <option value="@item.Id">@item.Nombre</option>
+                                    }
+                                }
+                            </select>
+                               @Html.ValidationMessage("NivelSeleccionadoId")
+
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+
+                        <div class="form-group">
+
+                            <button id="btnCicloChangeId" name="Action" value="ParamBtnCicloChange" hidden="True" type="submit"></button>
+                            <select class="form-control" name="CicloSeleccionadoId" onchange="CicloChange()" style="width: 160px">
+                                <option value="0">--Seleccionar--</option>
+                                @if (ViewBag.cicloss != null)
+                                {
+                                    foreach (var item in ViewBag.cicloss)
+                                    {
+                                        if (item.Id == @Model.CicloSeleccionadoId)
+                                        {         
+                                            <option value="@item.Id"   selected="selected" >@item.Nombre</option>                           
+                                        }
+                                        else
+                                        {
+                                            <option value="@item.Id">@item.Nombre</option>
+                                        }
+                                    }
+                                }
+                            </select>
+                               @Html.ValidationMessage("CicloSeleccionadoId")
+
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+
+
+                        <button id="btnTurnoChangeId" name="Action" value="ParamBtnTurnoChange" hidden="True" type="submit"></button>
+                        <select class="form-control" name="TurnoSeleccionadoId" style="width: 160px" onchange="TurnoChange()">
+                            @if (@Model.TurnoSeleccionadoId == true)
+                            {
+                                <option value="false">Mañana</option>
+                                <option value="true" selected="selected">Tarde</option>   
+                            }
+                            else
+                            {
+                                <option value="false" selected="selected">Mañana</option>
+                                <option value="true">Tarde</option>     
+                            }
+
+                        </select>
+                        
+
+                    </div>
+                    <div class="col-md-3">
+
+                        <div class="form-group">
+
+
+                            <button id="btnHorarioChangeId" name="Action" value="ParamBtnHorarioChange" hidden="True" type="submit"></button>
+                            <select class="form-control" name="HorarioSeleccionadoId" style="width: 200px" onchange="HorarioChange()">
+                                <option value="0">------- HORARIO -------   </option>
+                                @if (ViewBag.Horarioss != null)
+                                {
+                                    foreach (var item in ViewBag.Horarioss)
+                                    {
+                                        if (item.Id == @Model.HorarioSeleccionadoId)
+                                        {
+                                            <option value="@item.Id" selected="selected">@item.Dias   @item.HoraIni:00 - @item.HoraFin:00   (@item.Salon)</option>
+                                        }
+                                        else
+                                        {
+                                            <option value="@item.Id" >@item.Dias:   @item.HoraIni:00 - @item.HoraFin:00   (@item.Salon)</option>
+                                        }
+
+                                    }
+
+
+                                }
+                            </select>
+                               @Html.ValidationMessage("HorarioSeleccionadoId")
+
+                        </div>
+                    </div>
+
+
+
+                </div>
+
+
+
+                <legend>
+                    <h5></h5>
+                </legend>
+                <div class="form-group">
+                    <div class="col-sm-1 col-md-offset-2">
+                        <button class=" btn btn-success" id="btnGuardar" name="Action" type="submit" value="GuardarMatricula">GUARDAR</button>
+                    </div>
+                    <div class="col-sm-1 col-md-offset-3">
+                        <a class="btn btn-default btn btn-danger" href="~/matricula/Listar?criterio=" role="button">CANCELAR</a>
+                    </div>
+                </div>
+
+                <!-- Modal -->
+                <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+                    <div class="modal-dialog" role="document">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                                <h4 class="modal-title" id="myModalLabel">Registrar Estudiante</h4>
+                            </div>
+                            <div class="modal-body">
+
+
+                                @*   <form class="form-horizontal" role="form">*@
+                                <div class="form-group">
+                                    <label class="col-sm-3  control-label">Nombres</label>
+                                    <div class="col-sm-8 ">
+                                        <input type="text" class="form-control  input-sm" name="ModNombres" value="@Model.ModNombres" />
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label class="col-sm-3 control-label">Apellido Paterno</label>
+                                    <div class="col-sm-8">
+                                        <input type="text" class="form-control   input-sm" name="ModApellidoPaterno" value="@Model.ModApellidoPaterno" />
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label class="col-sm-3  control-label">Apellido Materno</label>
+                                    <div class="col-sm-8 ">
+                                        <input type="text" class="form-control  input-sm" name="ModApellidoMaterno" value="@Model.ModApellidoMaterno"/>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label class="col-sm-3  control-label">NroDocumento</label>
+                                    <div class="col-sm-8 ">
+                                        <input type="text" class="form-control  input-sm" name="ModNroDocumento" value="@Model.ModNroDocumento" />
+                                         @Html.ValidationMessage("ModNroDocumento")
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label class="col-sm-3  control-label ">Dirección</label>
+                                    <div class="col-sm-8 ">
+                                        <input type="text" class="form-control  input-sm"  name="ModDireccion" value="@Model.ModDireccion"/>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label class="col-sm-3  control-label">Celular</label>
+                                    <div class="col-sm-8 ">
+                                        <input type="text" class="form-control  input-sm" name="ModCelular" value="@Model.ModCelular" />
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label class="col-sm-3  control-label">Teléfono</label>
+                                    <div class="col-sm-8 ">
+                                        <input type="text" class="form-control  input-sm" name="ModTelefono" value="@Model.ModTelefono"/>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label class="col-sm-3  control-label">Email</label>
+                                    <div class="col-sm-8 ">
+                                        <input type="text" class="form-control  input-sm" name="ModEmail" value="@Model.ModEmail" />
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label class="col-sm-3  control-label">Fecha Nacimiento</label>
+                                    <div class="col-sm-8 ">
+                                    <input class="datepicker form-control input-sm"  type="text" name="ModFechaNacimiento" value="@Model.ModFechaNacimiento" />
+                                     @Html.ValidationMessage("ModFechaNacimiento")
+                                    </div>
+
+                                </div>
+                                <div class="form-group">
+                                    <label class="col-sm-3 control-label">Género</label>
+                                    @if (@Model.ModGenero == true)
+                                    {
+                                        <div class="  col-sm-8 ">
+                                            <label class="radio-inline">
+                                                <input type="radio" style="width: 15px; height: 15px;" name="ModGenero" value="true" checked="checked" />M                                           
+                                            </label>
+                                            <label class="radio-inline">
+                                                <input type="radio" style="width: 15px; height: 15px;" name="ModGenero" value="false" />F                              
+                                            </label>
+                                        </div>                                         
+                                    }
+                                    else if (@Model.ModGenero == false)
+                                    {
+                                        <div class="  col-sm-8 ">
+                                            <label class="radio-inline">
+                                                <input type="radio" style="width: 15px; height: 15px;" name="ModGenero" value="true" />M                                           
+                                            </label>
+                                            <label class="radio-inline">
+                                                <input type="radio" style="width: 15px; height: 15px;" name="ModGenero" value="false" checked="checked" />F                              
+                                            </label>
+                                        </div>                                          
+                                    }
+
+
+                                </div>
+                                <div class="form-group">
+                                    <label class="col-sm-3 control-label">País</label>
+                                    <div class="col-sm-8 ">
+                                        <select class="form-control" name="ModPaisSeleccionado" style="width: 365px">
+                                            <option value="">--Seleccionar--</option>
+                                            @if (ViewBag.Paisess != null)
+                                            {
+                                                foreach (var item in ViewBag.Paisess)
+                                                {
+                                                    if (@Model.ModPaisSeleccionado == item.Descripcion)
+                                                    {
+                                                <option value="@item.Descripcion" selected="selected">@item.Descripcion</option>
+                                                    }
+                                                    else
+                                                    {
+                                                <option value="@item.Descripcion">@item.Descripcion</option>
+                                                    }
+                                                }
+                                            }
+
+
+                                        </select>
+                                    </div>
+
+
+
+                                </div>
+                                <div class="form-group">
+                                    <label class="col-sm-3  control-label">Ciudad</label>
+                                    <div class="col-sm-8 ">
+                                        <input type="text" class="form-control  input-sm" name="ModCiudad" value="@Model.ModCiudad"/>
+                                    </div>
+                                </div>
+
+
+                                <div />
+                                @*  </form>*@
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-default" data-dismiss="modal">Cancelar</button>
+                                <button type="submit" class="btn btn-primary" name="Action" value="GuardarEstudiante">Guardar</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+
+</body>
+
+
+
+
+
+@*</html>*@
+
+@if (TempData["msjeErroModal"] != null)
+{
+    <script>
+        $(document).ready(function () {
+          
+        //})
+        
+            $("#myModal").modal();
+            alert("Error!! Modifique los campos en rojo y seleccione guardar");
+            
+        })
+    </script>
+}  
+
+
+
+@if (TempData["msjeErrorValidacion"] != null)
+{
+    <script>
+        $(document).ready(function () {
+
+            //})
+
+          
+            alert("Error!! Ingrese un número de documento válido y de click en buscar");
+
+        })
+    </script>
+}  
+
+
+
+
+<script type="text/javascript">
+    
+    function NivelChange() {
+        document.getElementById("btnNivelChangeId").click();
+    }
+
+    function CicloChange() {
+        document.getElementById("btnCicloChangeId").click();
+    }
+
+    function TurnoChange() {
+        document.getElementById("btnTurnoChangeId").click();
+    }
+
+    function HorarioChange() { //para que se carge predeterminadamente y no se pase a la primera opcion del combo
+        document.getElementById("btnHorarioChangeId").click();
+    }
+
+
+
+    $(document).ready(function () {
+        $(".datepicker").datepicker();
+        $("#registration-form").bootstrapValidator({
+            framework: 'bootstrap',
+            feedbackIcons: {
+                valid: "glyphicon glyphicon-ok",
+                invalid: "glyphicon glyphicon-remove",
+                validating: "glyphicon glyphicon-refresh"
+            },
+            fields: {
+                NroVoucher: {
+
+                    validators: {
+                        notEmpty: {
+                            message: "Nro Voucher es obligatorio"
+                        },
+
+                    }
+                },
+                TipoMatricula: {
+                    validators: {
+                        notEmpty: {
+                            message: "Tipo Matricula es obligatorio"
+                        },
+                    }
+                },
+                NroDocumento: {
+                    validators: {
+                        //notEmpty: {   NO ES OBLIGARIO XQ EN CASO YO ESTE SEGURO DE QUE EL ESTUDIATNE NO EXITE ENTONCES PASO A REGISTRAR 
+                        //    message: "Nro. Documento es obligatorio"
+                        //},
+                        numeric: {
+                            message: 'Solo se permiten números'
+                        },
+                        stringLength: {
+                            message: 'Debe contener 8 digitos',
+                            max: 8,
+                            min: 8
+                        }
+                    }
+                },
+
+                
+
+
+
+
+                ModNombres: {
+
+                    validators: {
+                        notEmpty: {
+                            message: "Nombres es obligatorio"
+                        },
+                        regexp: {
+                            regexp: /^[a-z\s]+$/i,
+                            message: 'Solo se permiten letras'
+                        }
+                    }
+                },
+                ModApellidoPaterno: {
+
+                    validators: {
+                        notEmpty: {
+                            message: "Apellido paterno es obligatorio"
+                        },
+                        regexp: {
+                            regexp: /^[a-z\s]+$/i,
+                            message: 'Solo se permiten letras'
+                        }
+                    }
+                },
+                ModApellidoMaterno: {
+
+                    validators: {
+                        notEmpty: {
+                            message: "Apellido Materno es obligatorio"
+                        },
+                        regexp: {
+                            regexp: /^[a-z\s]+$/i,
+                            message: 'Solo se permiten letras'
+                        }
+                    }
+                },
+                ModNroDocumento: {
+                    validators: {
+                        notEmpty: {
+                            message: "Nro. Documento es obligatorio"
+                        },
+                        numeric: {
+                            message: 'Solo se permiten números'
+                        },
+                        stringLength: {
+                            message: 'Debe contener 8 digitos',
+                            max: 8,
+                            min: 8
+                        }
+                    }
+                },
+                ModCelular: {
+                    validators: {
+                        notEmpty: {
+                            message: "Celular es obligatorio"
+                        },
+                        regexp: {
+                            regexp: /^[^a-zA-Z]*$/,
+                            message: 'No debe contener letras'
+                        }
+
+                    }
+                },
+
+                ModTelefono: {
+                    validators: {
+                        regexp: {
+                            regexp: /^[^a-zA-Z]*$/,
+                            message: 'No debe contener letras'
+                        }
+
+                    }
+                },
+                ModEmail: {
+                    validators: {
+                        notEmpty: {
+                            message: "Email es obligatorio"
+                        },
+                        emailAddress:
+                        {
+                            message: 'El formato de email es incorrecto'
+                        }
+                    }
+                },
+                ModFechaNacimiento: {
+                    validators: {
+                        notEmpty: {
+                            message: "Fecha es obligatorio"
+                        },
+                        
+
+
+                    }
+                },
+
+                ModPaisSeleccionado: {
+                    validators: {
+                        notEmpty: {
+                            message: "País es obligatorio"
+                        },
+                    }
+                },
+                ModCiudad: {
+                    validators: {
+                        notEmpty: {
+                            message: "Ciudad es obligatorio"
+                        },
+                        regexp: {
+                            regexp: /^[a-z\s]+$/i,
+                            message: 'Solo se permiten letras'
+                        }
+
+                    }
+                },
+
+
+            }
+
+        });
+
+        //validator.on("success.form.bv", function (e) {
+        //    e.preventDefault();
+        //});
+        $('.datepicker').on('changeDate show', function (e) {
+            $('#registration-form').bootstrapValidator('revalidateField', 'ModFechaNacimiento');
+        });
+
+
+    });
+</script>

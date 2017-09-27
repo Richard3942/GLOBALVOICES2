@@ -1,0 +1,149 @@
+﻿<body class="container">
+    <div class="panel panel-primary">
+        <div class="panel-heading">
+            <h4 align="center">Lista de Matriculas</h4>
+        </div>
+        <div class="panel-body">
+            
+            @if (TempData["msjeGuardoConExito"] != null)
+            {
+                <script>
+                    $(document).ready(function () {
+                        alert("Se guardó con éxito");
+                    })
+                </script>
+            }
+             @if (TempData["msjeSalonLleno"] != null)
+            {
+                <script>
+                    $(document).ready(function () {
+                        alert("Error!! Salon lleno");
+                    })
+                </script>
+            }           
+            
+            @if (TempData["msjeErrorEstudianteNoPuedeMatricularseEnEsteMesDosVeces"] != null)
+            {
+                <script>
+                    $(document).ready(function () {
+                        alert("Error!! El estudiante ya está matriculado en este mes");
+
+                    })
+                </script>
+            }  
+            <form class=" form-horizontal " action="/matricula/listar">                          
+                <div class="form-group form-horizontal" >
+                    <label class="col-sm-3 col-md-offset-1 control-label ">Apellidos o Nro. Documento</label>
+                    <div class="col-sm-4">
+                        <input class="form-control"  type="text" name="criterio"    />
+                    </div>
+                    <button class=" btn btn-default" id="btnGuardar" >Buscar</button>
+                </div>
+                <div class="form-group col-md-12" >
+                    <table class="table table-hover">
+                        <a class="btn btn-primary" href="~/Matricula/crear" role="button">Registrar</a>
+                        @*<a href="~/Matricula/crear">Registrar</a>*@
+                        <thead>
+                            <tr>
+                                @* <th>Id</th>*@
+                                <th>Nro Documento</th>
+                                <th>Apellidos y Nombres</th>
+                            
+                                <th>Fecha de Registro</th>
+                                <th>Nivel</th>
+                                <th>Ciclo</th>
+                                <th>Turno</th>
+                                <th>Horario</th>
+                                <th>Acciones</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+
+                            @foreach (var item in Model)
+                            {
+
+                                <tr>
+                                    @* <td>@item.Id</td>      *@ 
+                                    <td>@item.NroDocumento</td>
+                                    <td>@item.ApellidoPaterno @item.ApellidoMaterno @item.Nombres</td>
+                                
+                                    <td>@item.FechaMatricula</td>
+                                    <td>@item.NombreN</td>
+                                    <td>@item.NombreC</td>
+                                    @if (@item.Turno == false)
+                                    {
+                                        <td>Mañana</td>
+                                    }
+                                    else
+                                    {
+                                        <td>Tarde</td>
+                                    }
+
+                               
+                               
+                                    <td>@item.Dias @item.HoraIni :00-@item.HoraFin :00 (@item.NombreS) </td>
+                                    <td>
+                                        <a href="/matricula/detalle?id=@item.Id">Detalle</a>
+                 
+                                        <a href="/matricula/editar?id=@item.Id">Editar</a>
+                                    </td>
+   
+                                </tr>
+                            }
+    
+                        </tbody>
+                    </table>
+                </div>
+
+                 <nav>
+                    <ul class="pager">
+                        @{
+                            double veinte = double.Parse(20.ToString());
+                            double nroRegistros = double.Parse((ViewBag.NroRegistros).ToString());
+                            double numeroPaginas = nroRegistros / veinte;
+                            double numeroPaginasRedondeado = Math.Ceiling(numeroPaginas);
+                        } 
+                        <li>
+                            <a href="?page=1" >Inicio</a>
+                        </li>
+                        <li>
+                            @if (ViewBag.page != 1)
+                            {
+                                <a href="?page=@(ViewBag.page - 1)">Anterior</a>                              
+                            }
+                            else
+                            {
+                                <a href="?page=@(ViewBag.page - 1)" class="disabled">Anterior</a>
+                            }
+
+                           
+                        </li>
+                        <li>
+                            @if (ViewBag.page != numeroPaginasRedondeado)
+                            {
+                                <a href="?page=@(ViewBag.page + 1)" >Siguiente</a>
+                            }
+                            else
+                            {
+                                <a href="?page=@(ViewBag.page + 1)"  class="disabled" >Siguiente</a>
+                            }
+                           
+                        </li>
+                        <li>
+                            <a href="?page=@numeroPaginasRedondeado">Final</a>
+                        </li>                                                            
+                    </ul>
+                </nav>
+
+                <p align="right" >Pg @ViewBag.page</p>        
+
+            </form>
+        </div>
+    </div>
+        <style>
+          .disabled {
+           pointer-events: none;
+           cursor: default;
+        }      
+    </style>
+</body>
