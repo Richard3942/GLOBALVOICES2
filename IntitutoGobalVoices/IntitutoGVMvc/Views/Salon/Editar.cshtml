@@ -1,0 +1,82 @@
+﻿<body class="container">
+    <div class="panel panel-primary">
+        <div class="panel-heading">
+            <h4 align="center">Editar Salón</h4>
+        </div>
+        <div class="panel-body">
+
+            <form id="registration-form" class="col-md-10 col-md-offset-2 form-horizontal" action="/salon/guardar" method="post" role="form">
+                <input type="hidden" name="Id" value="@Model.Id" />
+                <div class="form-group">
+                    <label class="col-sm-3  control-label ">* Nombre</label>
+                    <div class="col-sm-5 ">
+                        <input type="text" class="form-control  input-sm" name="Nombre" value="@Model.Nombre" />
+                        @Html.ValidationMessage("Nombre")
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label class="col-sm-3 control-label"> Capacidad</label>
+                    <div class="col-sm-5">
+                        <input type="text" class="form-control  input-sm" name="Capacidad" value="@Model.Capacidad" />
+                        @Html.ValidationMessage("Capacidad")
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <div class="col-sm-1 col-md-offset-2">
+                        <button class=" btn btn-success" type="submit" id="btnGuardar" name="Action" value="GuardarEditarSalon">GUARDAR</button>
+
+                    </div>
+                    <div class="col-sm-1 col-md-offset-3">
+                        <a class="btn btn-default btn btn-danger" href="~/salon/listar?criterioBusqueda=" role="button">CANCELAR</a>
+                    </div>
+                </div>
+
+
+            </form>
+
+        </div>
+    </div>
+
+
+
+</body>
+
+<script type="text/javascript">
+    $(document).ready(function () {
+
+            $("#registration-form").bootstrapValidator({
+                 framework: 'bootstrap',
+                feedbackIcons: {
+                    valid: "glyphicon glyphicon-ok",
+                    invalid: "glyphicon glyphicon-remove",
+                    validating: "glyphicon glyphicon-refresh"
+                },
+                fields: {
+    
+
+
+                    Capacidad: {
+                        validators: {
+                            regexp: {
+                                regexp: /^[^a-zA-Z]*$/,
+                                message: 'No debe contener letras'
+                            }
+
+                        }
+                    }
+
+
+
+
+
+                }
+
+            });
+
+
+
+    });
+</script>
+

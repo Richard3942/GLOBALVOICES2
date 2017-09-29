@@ -1,0 +1,39 @@
+﻿<body class="container">
+    <div class="panel panel-primary">
+        <div class="panel-heading">
+            <h4 align="center">Detalle Nivel</h4>
+        </div>
+        <div class="panel-body">
+
+            <form id="registration-form" class="col-md-10 col-md-offset-2 form-horizontal" role="form">
+                <div class="form-group">
+                    <label class="col-sm-3  control-label "> Nombres</label>
+                    <div class="col-sm-5 ">
+                        <input type="text" class="form-control  input-sm" name="Nombre" value="@Model.Nombre" readonly="true" />
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label class="col-sm-3 control-label"> Descripción</label>
+                    <div class="col-sm-5">
+                        <input type="text" class="form-control   input-sm" name="Descripcion" value="@Model.Descripcion" readonly="true" />
+                    </div>
+                </div>
+
+                <div class="form-group">
+                   
+                    <div class="col-sm-1 col-md-offset-3">
+                        <a class="btn btn-default btn btn-danger" href="~/nivel/listar?criterioBusqueda=" role="button">CANCELAR</a>
+                    </div>
+                </div>
+
+
+            </form>
+
+        </div>
+    </div>
+
+
+
+</body>
+

@@ -12,6 +12,14 @@ namespace Interfaces
         //void AumentarNroMatriculados(int horarioId);
         EstadoSalon ObtenerEstadoSalonByHorarioId(int horarioId);
         void ActualizarEstadoSalon(EstadoSalon estadoSalon);
+        List<Salon> ObtenerSalonPorCriterio(string criterio, int page = 1);
+        Salon ObtenerSalonById(int id);
+        void RegistrarSalon(Salon salon);
+        void UpdateSalon(Salon salon);
+        void EliminarSalon(int id);
+        
+        
+        
      
     }
 }

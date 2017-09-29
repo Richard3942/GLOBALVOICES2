@@ -68,3 +68,17 @@ C:\Users\Windows7V\Documents\Repostor\arhivoGlobalVoices\trunk\IntitutoGobalVoic
 C:\Users\Windows7V\Documents\Repostor\arhivoGlobalVoices\trunk\IntitutoGobalVoices\BD\obj\Debug\BD.csprojResolveAssemblyReference.cache
 C:\Users\Windows7V\Documents\Repostor\arhivoGlobalVoices\trunk\IntitutoGobalVoices\BD\obj\Debug\BD.dll
 C:\Users\Windows7V\Documents\Repostor\arhivoGlobalVoices\trunk\IntitutoGobalVoices\BD\obj\Debug\BD.pdb
+C:\Users\Windows7V\Documents\Repostor\globalVoices\branches\3CAMBIOS\IntitutoGobalVoices\BD\bin\Debug\BD.dll.config
+C:\Users\Windows7V\Documents\Repostor\globalVoices\branches\3CAMBIOS\IntitutoGobalVoices\BD\bin\Debug\BD.dll
+C:\Users\Windows7V\Documents\Repostor\globalVoices\branches\3CAMBIOS\IntitutoGobalVoices\BD\bin\Debug\BD.pdb
+C:\Users\Windows7V\Documents\Repostor\globalVoices\branches\3CAMBIOS\IntitutoGobalVoices\BD\bin\Debug\Entidades.dll
+C:\Users\Windows7V\Documents\Repostor\globalVoices\branches\3CAMBIOS\IntitutoGobalVoices\BD\bin\Debug\EntityFramework.dll
+C:\Users\Windows7V\Documents\Repostor\globalVoices\branches\3CAMBIOS\IntitutoGobalVoices\BD\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\Windows7V\Documents\Repostor\globalVoices\branches\3CAMBIOS\IntitutoGobalVoices\BD\bin\Debug\Entidades.pdb
+C:\Users\Windows7V\Documents\Repostor\globalVoices\branches\3CAMBIOS\IntitutoGobalVoices\BD\bin\Debug\EntityFramework.xml
+C:\Users\Windows7V\Documents\Repostor\globalVoices\branches\3CAMBIOS\IntitutoGobalVoices\BD\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\Windows7V\Documents\Repostor\globalVoices\branches\3CAMBIOS\IntitutoGobalVoices\BD\bin\Debug\es\EntityFramework.resources.dll
+C:\Users\Windows7V\Documents\Repostor\globalVoices\branches\3CAMBIOS\IntitutoGobalVoices\BD\bin\Debug\es\EntityFramework.SqlServer.resources.dll
+C:\Users\Windows7V\Documents\Repostor\globalVoices\branches\3CAMBIOS\IntitutoGobalVoices\BD\obj\Debug\BD.csprojResolveAssemblyReference.cache
+C:\Users\Windows7V\Documents\Repostor\globalVoices\branches\3CAMBIOS\IntitutoGobalVoices\BD\obj\Debug\BD.dll
+C:\Users\Windows7V\Documents\Repostor\globalVoices\branches\3CAMBIOS\IntitutoGobalVoices\BD\obj\Debug\BD.pdb

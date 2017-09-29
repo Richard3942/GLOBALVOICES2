@@ -22,6 +22,45 @@ namespace Repository
             context.SaveChanges();
         }
 
+        public List<Salon> ObtenerSalonPorCriterio(string criterio, int page = 1)
+        {
+            var query = from p in context.Salons select p;
+            if (criterio != "" && criterio != null && criterio != string.Empty)
+            {
+                query = from p in query where (p.Nombre.Contains(criterio)) select p;
+            }
+            return query.ToList();
+        }
 
+        public Salon ObtenerSalonById(int id)
+        {
+            var query = from p in context.Salons where p.Id == id select p;
+            return query.SingleOrDefault();
+        }
+
+
+        public void RegistrarSalon(Salon salon)
+        {
+            context.Salons.Add(salon);
+            context.SaveChanges();
+        }
+
+        public void UpdateSalon(Salon salon)
+        {
+            if (salon != null)
+                context.Entry(salon).State = EntityState.Modified;
+            context.SaveChanges();
+        }
+
+
+        public void EliminarSalon(int id)
+        {
+            var salon = context.Salons.Find(id);
+            if (salon != null)
+            {
+                context.Entry(salon).State = EntityState.Deleted;
+                context.SaveChanges();
+            }
+        }
     }
 }

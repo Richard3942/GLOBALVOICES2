@@ -17,5 +17,10 @@ namespace IntitutoGVMvc.Controllers
             return View();
         }
 
+         [AllowAnonymous]
+         public ActionResult AboutUs()
+         {
+             return View("AboutUs");
+         }
     }
 }

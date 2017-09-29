@@ -21,3 +21,7 @@ C:\Users\Windows7V\Documents\Repostor\arhivoGlobalVoices\trunk\IntitutoGobalVoic
 C:\Users\Windows7V\Documents\Repostor\arhivoGlobalVoices\trunk\IntitutoGobalVoices\Entidades\bin\Debug\Entidades.pdb
 C:\Users\Windows7V\Documents\Repostor\arhivoGlobalVoices\trunk\IntitutoGobalVoices\Entidades\obj\Debug\Entidades.dll
 C:\Users\Windows7V\Documents\Repostor\arhivoGlobalVoices\trunk\IntitutoGobalVoices\Entidades\obj\Debug\Entidades.pdb
+C:\Users\Windows7V\Documents\Repostor\globalVoices\branches\3CAMBIOS\IntitutoGobalVoices\Entidades\bin\Debug\Entidades.dll
+C:\Users\Windows7V\Documents\Repostor\globalVoices\branches\3CAMBIOS\IntitutoGobalVoices\Entidades\bin\Debug\Entidades.pdb
+C:\Users\Windows7V\Documents\Repostor\globalVoices\branches\3CAMBIOS\IntitutoGobalVoices\Entidades\obj\Debug\Entidades.dll
+C:\Users\Windows7V\Documents\Repostor\globalVoices\branches\3CAMBIOS\IntitutoGobalVoices\Entidades\obj\Debug\Entidades.pdb

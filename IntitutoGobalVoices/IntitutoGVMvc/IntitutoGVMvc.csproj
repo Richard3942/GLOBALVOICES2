@@ -153,11 +153,14 @@
     <Compile Include="App_Start\UnityConfig.cs" />
     <Compile Include="App_Start\UnityMvcActivator.cs" />
     <Compile Include="App_Start\WebApiConfig.cs" />
+    <Compile Include="Controllers\CicloController.cs" />
     <Compile Include="Controllers\EstudianteController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\Login.cs" />
     <Compile Include="Controllers\MatriculaController.cs" />
     <Compile Include="Controllers\MyAccountController.cs" />
+    <Compile Include="Controllers\NivelController.cs" />
+    <Compile Include="Controllers\SalonController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -1183,9 +1186,22 @@
     <Content Include="Views\Matricula\Editar.cshtml" />
     <Content Include="Views\Matricula\Detalle.cshtml" />
     <Content Include="Views\MyAccount\Login.cshtml" />
+    <Content Include="Views\Nivel\ListarNivel.cshtml" />
+    <Content Include="Views\Nivel\Crear.cshtml" />
+    <Content Include="Views\Nivel\Detalle.cshtml" />
+    <Content Include="Views\Nivel\Editar.cshtml" />
+    <Content Include="Views\Salon\ListarSalones.cshtml" />
+    <Content Include="Views\Salon\Detalle.cshtml" />
+    <Content Include="Views\Salon\Crear.cshtml" />
+    <Content Include="Views\Salon\Editar.cshtml" />
+    <Content Include="Views\Ciclo\ListarCiclo.cshtml" />
+    <Content Include="Views\Ciclo\Crear.cshtml" />
+    <Content Include="Views\Ciclo\Editar.cshtml" />
+    <Content Include="Views\Home\AboutUs.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="Imagenes\" />
     <Folder Include="Models\" />
   </ItemGroup>
   <ItemGroup>

@@ -1,0 +1,80 @@
+﻿<body class="container">
+    <div class="panel panel-primary">
+        <div class="panel-heading">
+            <h4 align="center">Editar Ciclo</h4>
+        </div>
+        <div class="panel-body">
+
+            <form id="registration-form" class="col-md-10 col-md-offset-2 form-horizontal" action="/ciclo/guardar" method="post" role="form">
+                <div class="form-group">
+                    <label class="col-sm-3  control-label ">* Nombres</label>
+                    <div class="col-sm-5 ">
+                        <input type="text" class="form-control  input-sm" name="Nombre" value="@Model.Nombre" />
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label class="col-sm-3 control-label"> Descripción</label>
+                    <div class="col-sm-5">
+                        <input type="text" class="form-control   input-sm" name="Descripción" value="@Model.Descripcion" />
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label class="col-sm-3 control-label">* Nivel</label>
+                    <div class="col-sm-5">
+                        <input id="nivelId" type="text" class="form-control   input-sm" name="NivelFk" value="@Model.NivelFk" style="display:none;" >
+                        <select class=" form-control" id="Nivel" style="width: 350px" onchange="myFunction()">
+                            <option value="">Seleccione un Nivel</option>
+                            @if (ViewBag.Niveles != null)
+                            {
+                                foreach (var item in ViewBag.Niveles)
+                                {
+                                    if (@Model.NivelFk == item.Id)
+                                    {
+                                        <option value="@item.Id" selected="selected">@item.Nombre</option>
+                                    }
+                                    else
+                                    {
+                                        <option value="@item.Id">@item.Nombre</option>
+                                    }
+                                    
+                                }
+                            }
+                        </select>
+
+                    </div>
+                </div>
+
+
+
+                <div class="form-group">
+                    <div class="col-sm-1 col-md-offset-2">
+                        <button class=" btn btn-success" type="submit" id="btnGuardar" name="Action" value="GuardarEditarCiclo">GUARDAR</button>
+
+                    </div>
+                    <div class="col-sm-1 col-md-offset-3">
+                        <a class="btn btn-default btn btn-danger" href="~/ciclo/listar?criterioBusqueda=" role="button">CANCELAR</a>
+                    </div>
+                </div>
+
+
+            </form>
+
+        </div>
+    </div>
+
+
+
+</body>
+
+<script type="text/javascript">
+    function myFunction() {
+
+        var select = document.getElementById("Nivel");
+        var nivelIdInput = document.getElementById("nivelId");
+        var index = select.value
+        nivelIdInput.value = index
+
+    }
+</script>

@@ -1,0 +1,56 @@
+﻿<body class="container">
+    <div class="panel panel-primary">
+        <div class="panel-heading">
+            <h4 align="center">Lista de Niveles</h4>
+        </div>
+        <div class="panel-body">
+            <form class=" form-horizontal " action="/nivel/listar">
+                <div class="form-group form-horizontal">
+                    <label class="col-sm-3 col-md-offset-1 control-label ">Nombre</label>
+                    <div class="col-sm-4">
+                        <input class="form-control" type="text" name="criterioBusqueda" />
+                    </div>
+                    <button class=" btn btn-default" id="btnGuardar">Buscar</button>
+
+                </div>
+                <div class="form-group col-md-12">
+                    <table class="table table-hover">
+                        <a class="btn btn-primary" href="~/nivel/crear" role="button">Registrar</a>
+
+                        <thead>
+                            <tr>
+                                @*<th>Id</th>*@
+                                <th>Nombre</th>
+                                <th>Descripcion</th>
+                                <th>Acciones</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            @foreach (var item in Model)
+                            {
+
+                                <tr>
+                                    @*<td>@item.Id</td>       *@
+                                    <td>@item.Nombre</td>
+                                    <td>@item.Descripcion</td>
+                                    <td>
+                                        <a href="/nivel/detalle?id=@item.Id">Detalle</a>
+                                        <a href="/nivel/editar?id=@item.Id">Editar</a>
+
+                                        @Html.ActionLink("Eliminar", "Eliminar",
+                                        new { id = item.Id },
+                                  new { onClick = "return confirm('Desea Eliminar al Nivel " + @item.Nombre + " " + "?');" })
+                                    </td>
+
+                                </tr>
+                            }
+
+                        </tbody>
+                    </table>
+                </div>
+                <nav>
+ 
+                </nav>
+            
+            </form>
+</body>

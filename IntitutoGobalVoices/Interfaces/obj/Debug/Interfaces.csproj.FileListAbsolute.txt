@@ -33,3 +33,10 @@ C:\Users\Windows7V\Documents\Repostor\arhivoGlobalVoices\trunk\IntitutoGobalVoic
 C:\Users\Windows7V\Documents\Repostor\arhivoGlobalVoices\trunk\IntitutoGobalVoices\Interfaces\obj\Debug\Interfaces.csprojResolveAssemblyReference.cache
 C:\Users\Windows7V\Documents\Repostor\arhivoGlobalVoices\trunk\IntitutoGobalVoices\Interfaces\obj\Debug\Interfaces.dll
 C:\Users\Windows7V\Documents\Repostor\arhivoGlobalVoices\trunk\IntitutoGobalVoices\Interfaces\obj\Debug\Interfaces.pdb
+C:\Users\Windows7V\Documents\Repostor\globalVoices\branches\3CAMBIOS\IntitutoGobalVoices\Interfaces\bin\Debug\Interfaces.dll
+C:\Users\Windows7V\Documents\Repostor\globalVoices\branches\3CAMBIOS\IntitutoGobalVoices\Interfaces\bin\Debug\Interfaces.pdb
+C:\Users\Windows7V\Documents\Repostor\globalVoices\branches\3CAMBIOS\IntitutoGobalVoices\Interfaces\bin\Debug\Entidades.dll
+C:\Users\Windows7V\Documents\Repostor\globalVoices\branches\3CAMBIOS\IntitutoGobalVoices\Interfaces\bin\Debug\Entidades.pdb
+C:\Users\Windows7V\Documents\Repostor\globalVoices\branches\3CAMBIOS\IntitutoGobalVoices\Interfaces\obj\Debug\Interfaces.csprojResolveAssemblyReference.cache
+C:\Users\Windows7V\Documents\Repostor\globalVoices\branches\3CAMBIOS\IntitutoGobalVoices\Interfaces\obj\Debug\Interfaces.dll
+C:\Users\Windows7V\Documents\Repostor\globalVoices\branches\3CAMBIOS\IntitutoGobalVoices\Interfaces\obj\Debug\Interfaces.pdb

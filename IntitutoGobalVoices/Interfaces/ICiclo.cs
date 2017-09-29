@@ -9,8 +9,12 @@ namespace Interfaces
 {
     public interface ICiclo
     {
-
-
         List<Ciclo> ObtenerCiclosPorNivelId(int nivelId);
+        List<Ciclo> ObtenerCiclosPorCriterio(string criterio, int page = 1);
+        void RegistrarCiclo(Ciclo ciclo);
+        Ciclo ObtenerCicloById(int id);
+        void UpdateCiclo(Ciclo ciclo);
+
+        void EliminarCiclo(int id);
     }
 }
